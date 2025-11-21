@@ -1,0 +1,12 @@
+[user]
+    name = Slava.In
+    email = vyacheslav.inyutochkin@gmail.com
+[includeIf "gitdir:~/kameleoon/"]
+    PATH = ~/kameleoon/.gitconfig
+[alias]
+    s = status
+    co = checkout
+[pull]
+    rebase = false
+[core]
+	editor = hx
