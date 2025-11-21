@@ -1,0 +1,71 @@
+[language-server]
+jdtls = { command = "jdtls" }
+language-server = { command = "jdtls", args = ["-data", "/home/slava/.cache/jdtls/workspace"]}
+
+[[language]]
+name = "javascript"
+formatter = { command = "prettier" }
+language-servers = [
+  "typescript-language-server", # optional
+  "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "jsx"
+formatter = { command = "prettier" }
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettier" }
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "tsx"
+formatter = { command = "prettier" }
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "java"
+scope = "source.java"
+injection-regex = "java"
+file-types = ["java"]
+roots = ["pom.xml", "build.gradle"]
+language-servers = [ "jdtls" ]
+indent = { tab-width = 4, unit = "    " }
+# TODO: no idea what is going on here
+# formatter = { command = "clang-format", args = ["--style=file"] }
+formatter = { command = "find src/main/java/com/kameleoon -iname '*.java' | xargs clang-format -i", args= [ "--style-file:/home/slava/kameleoon/integrations/kafka-connect-commons/.clang-format"] }
+# formatter = { command = "%{filename} | xargs clang-format -i --style-file:/home/slava/kameleoon/integrations/kafka-connect-commons/.clang-format" }
+
+[[language]]
+name = "odin"
+scope = "source.odin"
+file-types = ["odin"]
+roots = ["ols.json", "main.odin"]
+language-servers = ["ols"]
+indent = { tab-width = 2, unit = "  " }
+block-comment-tokens = { start = "/*", end = "*/" }
+comment-token = "//"
+injection-regex = "odin"
+auto-format = false
+formatter = { command = "odinfmt", args = ["-stdin", "true"] }
+
+# Doesn't work for some reason (maybe related to comments)
+[[language]]
+name = "markdown"
+language-servers = ["mdpls"]
+comment-tokens = ["-", "+", "*", "- [ ]", ">"]
+
+[language-server.mdpls]
+command = "/home/slava/.cargo/bin/mdpls"
+config = { markdown.preview.auto = false, markdown.preview.browser = "google-chrome"}

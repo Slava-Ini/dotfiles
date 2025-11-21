@@ -1,0 +1,142 @@
+theme = "nightfox"
+
+[editor]
+true-color = true
+line-number = "relative"
+
+[editor.file-picker]
+hidden = false
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-base-name", "read-only-indicator", "file-modification-indicator"]
+
+[editor.soft-wrap]
+enable = true
+# max-indent-retain = 0
+wrap-indicator = ""
+
+# TODO: somehow wrap long lines? 
+# Not added yet, see [PR](https://github.com/helix-editor/helix/pull/12204)
+
+# [editor.statusline]
+# merge-with-commandline = true
+
+[keys.normal]
+# - Other (think about this one again)
+# x = "extend_to_line_bounds"
+# - Move lines
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+# - Code docs
+S-k = "hover"
+
+# - Search and replace
+C-f = "global_search"
+
+# TODO: doesn't work - probably tmux interference
+# - Move between views
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+
+# TODO: make it so buffer picker and file picker automatically hide preview (C-t)
+# TODO: make it co C-; inserts `;` in the end of line without having to goo in insert mode
+
+# TODO: work on vim-like line selection
+C-r = ":config-reload"
+C-s = ":w"
+# - r is for `scooter` search and replace
+# - Somehow name those `r` and `g` "multiple commands"
+"\\" = { q = ":q", e = "buffer_picker", r = [
+    ":write-all",
+    ":insert-output scooter >/dev/tty",
+    ":redraw",
+    ":reload-all"
+], f = ":format", g = [
+    ":write-all",
+    ":insert-output lazygit >/dev/tty",
+    ":redraw",
+    ":reload-all"
+], m = ":lsp-workspace-command 'Open Preview'", b = ":run-shell-command ./gradlew build > /dev/null"}
+C-space = "code_action"
+ret = ["open_below", "normal_mode"]
+"." = ["repeat_last_motion"]
+C-a = "select_all"
+# https://github.com/helix-editor/helix/issues/1369
+C-7 = "toggle_comments"
+
+# - Search locally
+"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection"] 
+
+[keys.select]
+C-7 = "toggle_comments"
+
+[keys.insert]
+# j = { k = "normal_mode" }
+# k = { j = "normal_mode" }
+"A-;" = "normal_mode"
+
+# Yazi doesn't work? (https://github.com/helix-editor/helix/wiki/Recipes#advanced-file-explorer-with-yazi)
+# [keys.normal.space]
+# e = [
+# ':sh rm -f /tmp/unique-file',
+# ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+# ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+# ':open %sh{cat /tmp/unique-file}',
+# ':redraw',
+# ]
+
+# -- What to explore
+# - Macros
+# - Buffer history
+
+# --- What to configure
+# -- Useful default of helix-editor lsp [link](https://github.com/helix-editor/helix/blob/master/languages.toml)
+# - Yanking and pasting across all the buffers?
+# - Make it so `shift+enter` or `ctrl+enter` insert a clean newline (not continue comments)
+# - Have an idea about moving between wrapped lines (In VIM it's `gj` or `gk`, but in Helix it's default, however `gj` and `gk` do as VIM default `j/k` behavior, soooo it seems we can just swap them + test on jumping n-times)
+# - This one [link](https://github.com/helix-editor/helix/issues/3077)
+# - Improve the pain with `a` (newline) 
+#   - [link_1](https://github.com/helix-editor/helix/issues/2956)
+#   - [link_2](https://github.com/helix-editor/helix/issues/1377)
+# - Improve the pain with `x`
+# - Grammar checks
+# - Auto indenting tokens on newline (CR) like here for the commend (+ check markdown)
+# - When searching in files make it so:
+#   - all matches are  displayed
+#   - there's an indication of how many matches there are
+# - C-; to inject semicolon in the end of the line
+# - Alias for custom '\\' commands
+# - LSPs:
+#  - TS
+#  - Markdown (preview is installed, checke marksman - below here and [here](https://github.com/helix-editor/helix/issues/2824))
+#  - Rust
+#  - C
+#  - Odin OLS + FMT configured, DAP needed
+# - Make it so on loading the project (`hx .`) file explorer opens instead of file picker
+# - `d` and `c` to the beginning/end of line - vim is easy - `c$` maybe I can try a shortcut so that `$` == `vgl` and so on
+# - Copy path/filename
+# - Debugger
+# - Proper Java formatting (works really weird now)
+# - Play with jump list
+# - Moving multiple lines
+# - Theme nightfox/tokyonight/default(colibri)?
+# - Spell checking (point 5. [here](https://github.com/joaocarvalhoopen/Helix_editor_for_the_Odin_programming_Language) + point 5 according config)
+# - Markdown LSP (point 3. [here](https://github.com/joaocarvalhoopen/Helix_editor_for_the_Odin_programming_Language) + point 5 according config)
+ 
+# -- Weirdness
+# - Continiously select f/t result (without canceling previous selection)
+
+# --- What's missing in Helix
+
+# - Repeating last action (available partially for f/t)
+# - Removing a command line
+# - Filetree (forks?)
+# - Hunk manipulations and overall deeper git integration
+
