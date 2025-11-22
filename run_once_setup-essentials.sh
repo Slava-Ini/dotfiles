@@ -26,6 +26,11 @@ sudo usermod -aG docker "$USER"
 sudo systemctl restart docker
 log "Docker configured"
 
+# -- Asian Fonts (Arch)
+log "Installing Asian Fonts"
+sudo pacman -S noto-fonts-cjk
+log "Asian Fonts installed"
+
 # -- Lazy Docker
 log "Installing LazyDocker"
 sudo pacman -S --noconfirm lazydocker
