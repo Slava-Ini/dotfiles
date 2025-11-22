@@ -3,10 +3,6 @@
 - Additional Tools
   - GLSL Viewer etc.
 
-- After hook (Info)
-  - prefix + I to install TPM plugins
-  - restart terminal
-
 - Other 
   - Selecta a new font (Fira Mono/Hack/Roboto/Inconsolata) [link](https://www.programmingfonts.org/#jetbrainsmono) 
     And via Nerd Fonts somehow?
