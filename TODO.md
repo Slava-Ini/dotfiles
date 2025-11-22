@@ -3,9 +3,6 @@
 - Additional Tools
   - GLSL Viewer etc.
 
-- Config files
-  - btop (theme, vim keybindings)
-
 - After hook (Info)
   - prefix + I to install TPM plugins
   - restart terminal
