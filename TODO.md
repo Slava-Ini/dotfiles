@@ -4,7 +4,7 @@
   - GLSL Viewer etc.
 
 - Config files
-  - yazi??
+  - btop (theme, vim keybindings)
 
 - After hook (Info)
   - prefix + I to install TPM plugins
@@ -12,6 +12,7 @@
 
 - Other 
   - Selecta a new font (Fira Mono/Hack/Roboto/Inconsolata) [link](https://www.programmingfonts.org/#jetbrainsmono) 
+    And via Nerd Fonts somehow?
   - Make alacritty a template depending on WSL/Ubuntu
   - `k9s`
   - Cleanup fish stuff
