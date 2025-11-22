@@ -35,6 +35,11 @@ log "Installing Fzf"
 sudo pacman -S --noconfirm fzf
 log "Fzf installed"
 
+# -- Ueberzug (Yazi preview)
+log "Installing Ueberzug"
+sudo pacman -S --noconfirm ueberzug
+log "Ueberzug installed"
+
 # -- Ripgrep
 log "Installing Ripgrep"
 sudo pacman -S --noconfirm ripgrep
