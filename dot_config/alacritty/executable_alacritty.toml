@@ -1,0 +1,28 @@
+[general]
+import = [
+    "./themes/catppuccin_frappe.toml",
+]
+
+# Wsl Option 2
+# [terminal]
+# shell = { program = 'C:\Program Files\WSL\wsl.exe',  args = ["--cd ~"] }
+
+[font]
+
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular"} 
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+size = 13.0
+offset = {x = 0, y = 0}
+
+[keyboard]
+
+bindings = [
+  { key = "Slash", mods = "Control", chars = "\u001f" },
+  # -- Great explanation on `\u001e` [here](https://github.com/neovide/neovide/issues/473)
+  #    by `ewhac`
+  { key = "Key6", mods = "Control", chars = "\u001e" },
+  { key = "Space", mods = "Control", chars = "\u0000"},
+  { key = "F11", action = "ToggleFullscreen" },
+]

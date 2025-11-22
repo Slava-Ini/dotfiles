@@ -40,6 +40,11 @@ log "Installing Ripgrep"
 sudo pacman -S --noconfirm ripgrep
 log "Ripgrep installed"
 
+# -- Tldr
+log "Installing Tldr"
+sudo pacman -S --noconfirm tldr
+log "Tldr installed"
+
 # -- Tree
 log "Installing Tree"
 sudo pacman -S --noconfirm tree

@@ -31,6 +31,11 @@ log "Installing Asian Fonts"
 sudo pacman -S noto-fonts-cjk
 log "Asian Fonts installed"
 
+# -- Mono Nerd Font
+log "Installing Jetbrains Mono Nerd Font"
+sudo pacman -S ttf-jetbrains-mono-nerd
+log "Jetbrains Mono Nerd Font installed"
+
 # -- Lazy Docker
 log "Installing LazyDocker"
 sudo pacman -S --noconfirm lazydocker
