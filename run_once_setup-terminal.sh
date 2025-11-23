@@ -82,7 +82,7 @@ log "Installing which"
 sudo pacman -S --noconfirm which
 log "which installed"
 
-# -- ssh-keygen
-log "Installing ssh-keygen"
-sudo pacman -S --noconfirm ssh-keygen
-log "ssh-keygen installed"
+# -- openssh
+log "Installing openssh"
+sudo pacman -S --noconfirm openssh
+log "openssh installed"
