@@ -31,6 +31,15 @@ log "Installing Asian Fonts"
 sudo pacman -S noto-fonts-cjk
 log "Asian Fonts installed"
 
+# -- Yay (Arch)
+log "Installing Yay"
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+cd ..
+sudo rm -rf yay-bin
+log "Yay installed"
+
 # -- Mono Nerd Font
 log "Installing Jetbrains Mono Nerd Font"
 sudo pacman -S ttf-jetbrains-mono-nerd
