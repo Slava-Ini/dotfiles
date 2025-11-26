@@ -70,3 +70,19 @@ log "Installing Btop"
 sudo pacman -S --noconfirm btop
 log "Btop installed"
 
+# == Arch ==
+
+# -- sudo
+log "Installing sudo"
+sudo pacman -S --noconfirm sudo
+log "sudo installed"
+
+# -- which
+log "Installing which"
+sudo pacman -S --noconfirm which
+log "which installed"
+
+# -- openssh
+log "Installing openssh"
+sudo pacman -S --noconfirm openssh
+log "openssh installed"
