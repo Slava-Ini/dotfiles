@@ -14,5 +14,5 @@ fi
 log_message="[WARNING: $name] $message"
 timestamp=$(date +"%d/%m/%Y %H:%M:%S")
 
-echo "${cyan}$log_message${nc}"
+echo -e "${cyan}$log_message${nc}"
 echo "$timestamp $log_message" >> scripts/logs.txt

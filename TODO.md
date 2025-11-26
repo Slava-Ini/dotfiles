@@ -4,7 +4,7 @@
   - GLSL Viewer etc.
 
 - Other 
-  - Selecta a new font (Fira Mono/Hack/Roboto/Inconsolata) [link](https://www.programmingfonts.org/#jetbrainsmono) 
+  - Select a new font (Fira Mono/Hack/Roboto/Inconsolata) [link](https://www.programmingfonts.org/#jetbrainsmono) 
     And via Nerd Fonts somehow?
   - Make alacritty a template depending on WSL/Ubuntu
   - `k9s`
