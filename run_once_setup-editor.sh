@@ -11,6 +11,8 @@ error() {
 # Install Helix
 log "Installing Helix"
 sudo pacman -Syu --noconfirm helix
+# For system clipboard pasting to work (see [link](https://github.com/helix-editor/helix/discussions/5584))
+sudo pacman -S --noconfirm wl-clipboard
 log "Helix installed"
 
 # Install Typescript Language Server
