@@ -70,6 +70,12 @@ log "Installing Btop"
 sudo pacman -S --noconfirm btop
 log "Btop installed"
 
+# -- Scooter
+log "Installing Scooter"
+sudo yay -S scooter
+log "Scooter installed"
+
+
 # == Arch ==
 
 # -- sudo
