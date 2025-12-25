@@ -3,6 +3,12 @@ jdtls = { command = "jdtls" }
 language-server = { command = "jdtls", args = ["-data", "/home/slava/.cache/jdtls/workspace"]}
 
 [[language]]
+name = "rust"
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = false
+
+
+[[language]]
 name = "javascript"
 formatter = { command = "prettier" }
 language-servers = [
