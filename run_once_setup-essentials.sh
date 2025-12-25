@@ -62,7 +62,7 @@ log "Typescript installed"
 
 # -- Rust
 log "Installing Rust"
-sudo pacman -S --noconfirm rust
+sudo pacman -S --noconfirm rust rustup
 log "Rust installed"
 
 # -- Odin
