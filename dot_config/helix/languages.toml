@@ -69,3 +69,6 @@ comment-tokens = ["-", "+", "*", "- [ ]", ">"]
 [language-server.mdpls]
 command = "/home/slava/.cargo/bin/mdpls"
 config = { markdown.preview.auto = false, markdown.preview.browser = "google-chrome"}
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"

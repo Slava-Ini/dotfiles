@@ -63,6 +63,8 @@ log "Typescript installed"
 # -- Rust
 log "Installing Rust"
 sudo pacman -S --noconfirm rust rustup
+rustup default stable
+rustup component add rust-analyzer
 log "Rust installed"
 
 # -- Odin
