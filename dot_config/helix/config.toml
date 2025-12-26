@@ -48,6 +48,11 @@ C-l = "jump_view_right"
 # TODO: make it so buffer picker and file picker automatically hide preview (C-t)
 # TODO: make it co C-; inserts `;` in the end of line without having to goo in insert mode
 
+
+# Note: workaround for `\+c` command as macro commands can't be defined within `[]` sequence
+C-S-d = "delete_selection_noyank"
+C-S-y = "yank_to_clipboard"
+
 # TODO: work on vim-like line selection
 C-r = ":config-reload"
 C-s = ":w"
@@ -63,7 +68,7 @@ C-s = ":w"
     ":insert-output lazygit >/dev/tty",
     ":redraw",
     ":reload-all"
-], m = ":lsp-workspace-command 'Open Preview'", b = ":run-shell-command ./gradlew build > /dev/null"}
+], m = ":lsp-workspace-command 'Open Preview'", b = ":run-shell-command ./gradlew build > /dev/null", c = "@\"%P<C-S-y><C-S-d>"}
 C-space = "code_action"
 ret = ["open_below", "normal_mode"]
 "." = ["repeat_last_motion"]
