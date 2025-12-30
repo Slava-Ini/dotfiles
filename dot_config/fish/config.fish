@@ -93,3 +93,6 @@ set -gx PATH $PATH "/home/slava/.local/bin"
 
 # - Gradle
 set -gx PATH $PATH "/opt/gradle/gradle-9.1.0/bin"
+
+# - Atac
+set -gx ATAC_KEY_BINDINGS "/home/slava/.config/atac/key_bindings.toml"

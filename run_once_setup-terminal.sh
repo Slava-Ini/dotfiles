@@ -75,6 +75,11 @@ log "Installing Scooter"
 sudo yay -S scooter
 log "Scooter installed"
 
+# -- Atac
+
+log "Installing Atac"
+sudo pacman -S --noconfirm atac
+log "Atac installed"
 
 # == Arch ==
 
