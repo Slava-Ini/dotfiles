@@ -72,6 +72,13 @@ log "Installing Odin"
 sudo pacman -S --noconfirm odin
 log "Odin installed"
 
+# -- Java
+log "Installing Jdtls"
+yay -S jdtls
+mdkir /home/slava/.config/jdtls
+curl "https://projectlombok.org/downloads/lombok.jar" --output "/home/slava/.config/jdtls/lombok.jar" --progress-bar
+log "Jdtls installed"
+
 # -- Yarn
 log "Installing Yarn"
 sudo pacman -S --noconfirm yarn

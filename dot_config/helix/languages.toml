@@ -1,7 +1,3 @@
-[language-server]
-jdtls = { command = "jdtls" }
-language-server = { command = "jdtls", args = ["-data", "/home/slava/.cache/jdtls/workspace"]}
-
 [[language]]
 name = "rust"
 roots = ["Cargo.toml", "Cargo.lock"]
@@ -78,3 +74,11 @@ config = { markdown.preview.auto = false, markdown.preview.browser = "google-chr
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
+
+[language-server.jdtls]
+command = "jdtls"
+args = [
+  "-data",
+  "/home/slava/.cache/jdtls/workspace",
+  "--jvm-arg=-javaagent:/home/slava/.config/jdtls/lombok.jar",
+]

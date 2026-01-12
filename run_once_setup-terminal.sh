@@ -75,11 +75,6 @@ log "Installing Scooter"
 yay -S scooter
 log "Scooter installed"
 
-# -- Jdtls
-log "Installing Jdtls"
-yay -S jdtls
-log "Jdtls installed"
-
 # -- Atac
 log "Installing Atac"
 sudo pacman -S --noconfirm atac
