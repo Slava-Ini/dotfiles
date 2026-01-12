@@ -4,8 +4,6 @@
   - GLSL Viewer etc.
 
 - Other 
-  - Select a new font (Fira Mono/Hack/Roboto/Inconsolata) [link](https://www.programmingfonts.org/#jetbrainsmono) 
-    And via Nerd Fonts somehow?
   - Make alacritty a template depending on WSL/Ubuntu
   - Cleanup fish stuff
   - Alacritty config path must differ depending on the system
