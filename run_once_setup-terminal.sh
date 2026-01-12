@@ -72,12 +72,12 @@ log "Btop installed"
 
 # -- Scooter
 log "Installing Scooter"
-sudo yay -S scooter
+yay -S scooter
 log "Scooter installed"
 
 # -- Jdtls
 log "Installing Jdtls"
-sudo yay -S jdtls
+yay -S jdtls
 log "Jdtls installed"
 
 # -- Atac
