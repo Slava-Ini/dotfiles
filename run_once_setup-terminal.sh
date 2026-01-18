@@ -45,6 +45,11 @@ log "Installing Ripgrep"
 sudo pacman -S --noconfirm ripgrep
 log "Ripgrep installed"
 
+# -- Fd
+log "Installing Fd"
+sudo pacman -S --noconfirm fd
+log "Fd installed"
+
 # -- Tldr
 log "Installing Tldr"
 sudo pacman -S --noconfirm tldr
