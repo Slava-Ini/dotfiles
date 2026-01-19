@@ -43,6 +43,11 @@ log "OLS installed"
 
 # Install Markdown Oxide
 log "Installing Markdown Oxide"
-sudo pacman -Syu --noconfirm markdown-oxide
+sudo pacman -S --noconfirm markdown-oxide
 log "Markdon Oxide installed" 
 
+# Install Dotnet SDK and Omnisharp
+log "Installing Dotnet SDK and Omnisharp"
+sudo pacman -S --noconfirm dotnet-sdk
+yay -S omnisharp-roslyn
+log "Dotnet SDK and Omnisharp installed" 
