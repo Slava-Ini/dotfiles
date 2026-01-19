@@ -60,7 +60,7 @@ C-s = ":w"
 # - Somehow name those `r` and `g` "multiple commands"
 "\\" = { q = ":q", e = "buffer_picker", r = [
     ":write-all",
-    ":insert-output scooter >/dev/tty",
+    ":insert-output scooter --no-stdin >/dev/tty",
     ":redraw",
     ":reload-all"
 ], f = ":format", g = [
