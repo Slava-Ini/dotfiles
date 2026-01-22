@@ -2,8 +2,13 @@
 
 ## Windows
 
+- Configure `atac`
+- Configure `btop`
 - Configure `.gitconfig`
 - Configure `.ps1` installation scripts with prefix
+  + essentials
+  + terminal
+  - editor 
 
 ## Other 
 
