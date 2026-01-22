@@ -1,0 +1,17 @@
+{{ if ne .chezmoi.os "windows" }}
+AppData
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.config/alacritty
+.config/yazi
+.config/scooter
+.config/lazygit
+.config/fish
+.config/helix
+.tmux.conf
+.tmux
+{{ end }}
+
+README.md
+TODO.md
