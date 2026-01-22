@@ -3,11 +3,21 @@ function Log {
     & "$PSScriptRoot\scripts\windows\log_message.ps1" "setup-essentials.ps1" $Message
 }
 
+# -- PowerShell update
+Log "Updating PowerShell"
+winget install --id Microsoft.PowerShell --source winget
+Log "PowerShell Updated"
+
 # -- Scoop
 Log "Installing Scoop"
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 Log "Scoop installed"
+
+# -- Starship
+Log "Installing Starship"
+scoop install starship
+Log "Starship installed"
 
 # -- Lazygit
 Log "Installing Lazygit"
