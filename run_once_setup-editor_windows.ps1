@@ -1,11 +1,11 @@
 function Log {
     param([string]$Message)
-    & "$PSScriptRoot\scripts\windows\log_message.ps1" "setup-editor.ps1" $Message
+    & ".\scripts\windows\log_message.ps1" "setup-editor.ps1" $Message
 }
 
 function Error {
     param([string]$Message)
-    & "$PSScriptRoot\scripts\windows\log_message.ps1" "setup-editor.ps1" $Message
+    & ".\scripts\windows\log_message.ps1" "setup-editor.ps1" $Message
 }
 
 # -- Install Helix

@@ -3,6 +3,7 @@
 ## Windows
 
 - Configure `.gitconfig`
+  - Remove working things - template or separate file
 - Make it so Windows Terminal configs are also in dotfiles
   - Font
 

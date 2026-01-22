@@ -1,6 +1,6 @@
 function Log {
     param([string]$Message)
-    & "$PSScriptRoot\scripts\windows\log_message.ps1" "setup-terminal.ps1" $Message
+    & ".\scripts\windows\log_message.ps1" "setup-terminal.ps1" $Message
 }
 
 # -- Zoxide

@@ -1,6 +1,6 @@
 function Log {
     param([string]$Message)
-    & "$PSScriptRoot\scripts\windows\log_message.ps1" "setup-essentials.ps1" $Message
+    & ".\scripts\windows\log_message.ps1" "setup-essentials.ps1" $Message
 }
 
 # -- PowerShell update
@@ -46,7 +46,7 @@ Log "Rust installed"
 
 # -- Odin
 Log "Installing Odin"
-scoop bucket add extras
+scoop bucket add versions
 scoop install odin
 Log "Odin installed"
 
