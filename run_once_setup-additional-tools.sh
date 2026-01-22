@@ -1,7 +1,7 @@
 #!/bin/sh
 
 log() {
-  sh scripts/log_message.sh "setup-additional-tools.sh" "${1?}"
+  sh scripts/linux/log_message.sh "setup-additional-tools.sh" "${1?}"
 }
 
 # -- Cpupower

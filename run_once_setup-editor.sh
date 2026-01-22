@@ -1,11 +1,11 @@
 #!/bin/sh
 
 log() {
-  sh scripts/log_message.sh "setup_editor.sh" "${1?}"
+  sh scripts/linux/log_message.sh "setup_editor.sh" "${1?}"
 }
 
 error() {
-  sh scripts/log_error.sh "setup_editor.sh" "${1?}"
+  sh scripts/linux/log_error.sh "setup_editor.sh" "${1?}"
 }
 
 # Install Helix
