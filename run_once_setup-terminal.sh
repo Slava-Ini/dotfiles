@@ -1,7 +1,7 @@
 #!/bin/bash
 
 log() {
-  sh scripts/log_message.sh "setup-terminal.sh" "${1?}"
+  sh scripts/linux/log_message.sh "setup-terminal.sh" "${1?}"
 }
 
 # -- Alacritty
