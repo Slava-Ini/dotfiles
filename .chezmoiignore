@@ -1,6 +1,7 @@
 {{ if ne .chezmoi.os "windows" }}
 AppData
 .config/starship.toml
+*.ps1
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
@@ -12,6 +13,7 @@ AppData
 .config/helix
 .tmux.conf
 .tmux
+*.sh
 {{ end }}
 
 README.md
