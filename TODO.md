@@ -3,7 +3,8 @@
 ## Windows
 
 - Configure `.gitconfig`
-- Check what to be added from windows `.md`
+- Make it so Windows Terminal configs are also in dotfiles
+  - Font
 
 ## Other 
 
