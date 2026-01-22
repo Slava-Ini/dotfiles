@@ -1,0 +1,7 @@
+function Warn {
+    param([string]$Message)
+    & "$PSScriptRoot\scripts\windows\log_warn.ps1" "notify.ps1" $Message
+}
+
+Warn "Make sure to bind CapsLock to Escape in SharpKeys and reboot"
+

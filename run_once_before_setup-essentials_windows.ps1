@@ -19,6 +19,11 @@ Log "Installing Starship"
 scoop install starship
 Log "Starship installed"
 
+# -- SharpKeys
+Log "Installing SharpKeys"
+scoop install sharpkeys
+Log "SharpKeys installed"
+
 # -- Lazygit
 Log "Installing Lazygit"
 scoop install lazygit
