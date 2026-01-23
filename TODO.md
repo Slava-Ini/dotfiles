@@ -6,7 +6,8 @@
   - Remove working things - template or separate file
 - Make it so Windows Terminal configs are also in dotfiles
   - Font
-- Fix Yazi zoxide (seems not to be reading config)
+- Fix yazi (helix)
+  - First tackle the issue with `file` - see [yazi docs](https://yazi-rs.github.io/docs/installation/#windows) and potential [plugin solution](https://github.com/yazi-rs/plugins/tree/main/mime-ext.yazi)
 - Fix btop config
 - Atac - set vim key bindings via config
 - Scooter - make escape shortcut better for both Windows and Linux
