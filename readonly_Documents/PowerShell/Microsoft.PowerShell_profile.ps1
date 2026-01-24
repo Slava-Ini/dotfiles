@@ -4,6 +4,9 @@ Set-Alias -Name ld -Value lazydocker
 Set-Alias -Name ch -Value chezmoi
 Set-Alias -Name hx -Value helix
 
+# Env
+$YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
+
 # Startship
 Invoke-Expression (&starship init powershell)
 
@@ -26,4 +29,15 @@ function which($cmd)
   }
 
   $command.Source
+}
+
+# Prompt (for correct splitMode functioning with starship)
+function Invoke-Starship-PreCommand {
+  $loc = $executionContext.SessionState.Path.CurrentLocation;
+  $prompt = "$([char]27)]9;12$([char]7)"
+  if ($loc.Provider.Name -eq "FileSystem")
+  {
+    $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+  }
+  $host.ui.Write($prompt)
 }
