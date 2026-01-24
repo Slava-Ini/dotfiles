@@ -1,7 +1,11 @@
-function Warn {
+Import-Module helpers -Force
+
+$ScriptName = "notify.ps1"
+
+function WarnMsg {
     param([string]$Message)
-    & ".\scripts\windows\log_warning.ps1" "notify.ps1" $Message
+    Warn $ScriptName $Message
 }
 
-Warn "Make sure to bind CapsLock to Escape in SharpKeys and reboot"
+WarnMsg "Make sure to bind CapsLock to Escape in SharpKeys and reboot"
 

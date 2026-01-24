@@ -1,57 +1,62 @@
-function Log {
+Import-Module helpers -Force
+
+$ScriptName = "setup-essentials.ps1"
+
+function InfoMsg {
     param([string]$Message)
-    & ".\scripts\windows\log_message.ps1" "setup-essentials.ps1" $Message
+    Info $ScriptName $Message
+}
+
+function Install-Scoop {
+    param([string]$Package)
+    ScoopInstall $Package $ScriptName
+}
+
+function Install-Winget {
+    param([string]$Package)
+    WingetInstall $Package $ScriptName
 }
 
 # -- PowerShell update
-Log "Updating PowerShell"
-winget install --id Microsoft.PowerShell --source winget
-Log "PowerShell Updated"
+Install-Winget "Microsoft.PowerShell"
 
 # -- Scoop
-Log "Installing Scoop"
+InfoMsg "Installing Scoop"
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-Log "Scoop installed"
+InfoMsg "Scoop installed"
 
 # -- Starship
-Log "Installing Starship"
-scoop install starship
-Log "Starship installed"
+Install-Scoop "starship"
 
 # -- SharpKeys
-Log "Installing SharpKeys"
-scoop install sharpkeys
-Log "SharpKeys installed"
+Install-Scoop "sharpkeys"
 
 # -- Lazygit
-Log "Installing Lazygit"
-scoop install lazygit
-Log "Lazygit installed"
+Install-Scoop "lazygit"
 
 # -- NodeJS
-Log "Installing NodeJS"
-scoop install nodejs
-Log "NodeJS installed"
+Install-Scoop "nodejs"
 
 # -- TypeScript
-Log "Installing Typescript"
+InfoMsg "Installing Typescript"
 npm install -g typescript
-Log "Typescript installed"
+InfoMsg "Typescript installed"
 
 # -- Rust
-Log "Installing Rust"
-scoop install rust
-Log "Rust installed"
+Install-Scoop "rust"
 
 # -- Odin
-Log "Installing Odin"
-scoop bucket add versions
-scoop install odin
-Log "Odin installed"
+InfoMsg "Installing Odin"
+scoop bucket add versions 2>&1 | Out-Null
+Install-Scoop "odin"
 
 # -- Yazi
-Log "Installing Yazi with optional dependencies"
-scoop install yazi
-scoop install ffmpeg 7zip poppler resvg imagemagick
-Log "Yazi with optional dependencies installed"
+InfoMsg "Installing Yazi with optional dependencies"
+Install-Scoop "yazi"
+Install-Scoop "ffmpeg"
+Install-Scoop "7zip"
+Install-Scoop "poppler"
+Install-Scoop "resvg"
+Install-Scoop "imagemagick"
+InfoMsg "Yazi with optional dependencies installed"

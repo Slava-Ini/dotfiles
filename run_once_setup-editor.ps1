@@ -1,25 +1,32 @@
-function Log {
+Import-Module helpers -Force
+
+$ScriptName = "setup-editor.ps1"
+
+function InfoMsg {
     param([string]$Message)
-    & ".\scripts\windows\log_message.ps1" "setup-editor.ps1" $Message
+    Info $ScriptName $Message
 }
 
-function Error {
+function ErrorMsg {
     param([string]$Message)
-    & ".\scripts\windows\log_message.ps1" "setup-editor.ps1" $Message
+    Error $ScriptName $Message
+}
+
+function Install-Scoop {
+    param([string]$Package)
+    ScoopInstall $Package $ScriptName
 }
 
 # -- Install Helix
-Log "Installing Helix"
-scoop install helix
-Log "Helix installed"
+Install-Scoop "helix"
 
 # -- Install Typescript Language Server
-Log "Installing Typescript LS, Eslint and Prettier"
+InfoMsg "Installing Typescript LS, Eslint and Prettier"
 npm install -g typescript-language-server prettier eslint
-Log "Typescript LS, Eslint and Prettier installed"
+InfoMsg "Typescript LS, Eslint and Prettier installed"
 
 # -- Install Odin LSP
-Log "Installing OLS"
+InfoMsg "Installing OLS"
 $olsDir = Join-Path $env:TEMP "ols"
 $binDir = Join-Path $env:USERPROFILE ".local\bin"
 
@@ -29,7 +36,7 @@ if (Test-Path $olsDir) {
 
 git clone https://github.com/DanielGavin/ols.git $olsDir
 if (-not $?) {
-    Error "Failed to clone OLS"
+    ErrorMsg "Failed to clone OLS"
     exit 1
 }
 
@@ -53,10 +60,10 @@ if (Test-Path $odinfmtExe) {
 }
 
 Remove-Item -Path $olsDir -Recurse -Force
-Log "OLS installed"
+InfoMsg "OLS installed"
 
 # -- Install Dotnet SDK and Omnisharp
-Log "Installing Dotnet SDK and Omnisharp"
-scoop install dotnet-sdk
-scoop install omnisharp
-Log "Dotnet SDK and Omnisharp installed" 
+InfoMsg "Installing Dotnet SDK and Omnisharp"
+Install-Scoop "dotnet-sdk"
+Install-Scoop "omnisharp"
+InfoMsg "Dotnet SDK and Omnisharp installed" 
