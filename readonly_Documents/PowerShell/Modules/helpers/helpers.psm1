@@ -121,4 +121,25 @@ function WingetInstall {
     }
 }
 
-Export-ModuleMember -Function Info, Warn, Error, ScoopInstall, WingetInstall
+function NpmInstall {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$PackageName,
+
+        [Parameter(Mandatory=$true)]
+        [string]$ScriptName
+    )
+
+    # Check if package is already installed
+    $checkOutput = npm list -g $PackageName 2>&1 | Out-String
+
+    if ($checkOutput -match "\(empty\)") {
+        Info $ScriptName "Installing $PackageName"
+        npm install -g $PackageName 2>&1 | Out-Null
+        Info $ScriptName "$PackageName installed"
+    } else {
+        Info $ScriptName "$PackageName already installed, skipping"
+    }
+}
+
+Export-ModuleMember -Function Info, Warn, Error, ScoopInstall, WingetInstall, NpmInstall

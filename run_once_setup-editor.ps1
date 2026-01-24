@@ -20,10 +20,10 @@ function Install-Scoop {
 # -- Install Helix
 Install-Scoop "helix"
 
-# -- Install Typescript Language Server
-InfoMsg "Installing Typescript LS, Eslint and Prettier"
-npm install -g typescript-language-server prettier eslint
-InfoMsg "Typescript LS, Eslint and Prettier installed"
+# -- Install Typescript Language Server, Eslint and Prettier
+NpmInstall "typescript-language-server" $ScriptName
+NpmInstall "prettier" $ScriptName
+NpmInstall "eslint" $ScriptName
 
 # -- Install Odin LSP
 InfoMsg "Installing OLS"

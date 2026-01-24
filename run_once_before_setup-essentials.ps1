@@ -21,10 +21,15 @@ function Install-Winget {
 Install-Winget "Microsoft.PowerShell"
 
 # -- Scoop
-InfoMsg "Installing Scoop"
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-InfoMsg "Scoop installed"
+scoop --version *>&1 | Out-Null
+if ($LASTEXITCODE -ne 0) {
+    InfoMsg "Installing Scoop"
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+    InfoMsg "Scoop installed"
+} else {
+    InfoMsg "Scoop already installed, skipping"
+}
 
 # -- Starship
 Install-Scoop "starship"
@@ -39,9 +44,7 @@ Install-Scoop "lazygit"
 Install-Scoop "nodejs"
 
 # -- TypeScript
-InfoMsg "Installing Typescript"
-npm install -g typescript
-InfoMsg "Typescript installed"
+NpmInstall "typescript" $ScriptName
 
 # -- Rust
 Install-Scoop "rust"
