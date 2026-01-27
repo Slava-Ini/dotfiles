@@ -1,5 +1,6 @@
 {{ if ne .chezmoi.os "windows" }}
 AppData
+Documents
 .config/starship.toml
 *.ps1
 {{ end }}
