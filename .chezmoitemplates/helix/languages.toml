@@ -68,6 +68,19 @@ name = "markdown"
 language-servers = ["mdpls"]
 comment-tokens = ["-", "+", "*", "- [ ]", ">"]
 
+[[language]]
+name="xml"
+scope="source.axaml"
+injection-regex="axaml"
+file-types=["axaml"]
+language-servers=["avalonials"]
+grammar="xml"
+auto-format=false
+formatter={command="xaml-styler",args=["--write-to-stdout" ,"--take-pipe"]}
+
+[language-server.avalonials]
+command = "avalonia-ls"
+
 [language-server.mdpls]
 command = "/home/slava/.cargo/bin/mdpls"
 config = { markdown.preview.auto = false, markdown.preview.browser = "google-chrome"}
