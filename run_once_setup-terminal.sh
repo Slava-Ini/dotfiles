@@ -90,6 +90,11 @@ log "Installing Atac"
 sudo pacman -S --noconfirm atac
 log "Atac installed"
 
+# -- Just
+log "Installing Just"
+sudo pacman -S --noconfirm just
+log "Just installed"
+
 # == Arch ==
 
 # -- sudo
