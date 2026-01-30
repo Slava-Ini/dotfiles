@@ -14,6 +14,8 @@
 
 ## Other 
 
+- If `csharp-ls` works great on windows and dotnet 9 [info](https://github.com/razzmatazz/csharp-language-server)
+  Change `omnisharp` to it in the scripts `dotnet tool install --global csharp-ls`, probably env variable also required on Windows (`fish` is already done)
 - Improve cross-platform templates (via folders?) so it's more obvious what is shared
 - Make alacritty a template depending on WSL/Ubuntu
 - Cleanup fish stuff
