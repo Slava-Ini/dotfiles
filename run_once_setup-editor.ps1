@@ -65,6 +65,5 @@ InfoMsg "OLS installed"
 # -- Install Dotnet SDK and CSharp LS
 InfoMsg "Installing Dotnet SDK and CSharp LS"
 Install-Scoop "dotnet-sdk"
-Install-Scoop "omnisharp"
 dotnet tool install --global csharp-ls
 InfoMsg "Dotnet SDK and CSharp LS installed" 
