@@ -50,4 +50,13 @@ log "Markdon Oxide installed"
 log "Installing Dotnet SDK and CSharp LS"
 sudo pacman -S --noconfirm dotnet-sdk
 dotnet tool install --global csharp-ls
-log "Dotnet SDK and CSharp LS installed" 
+log "Dotnet SDK and CSharp LS installed"
+
+# Install Avalonia LS
+log "Installing Avalonia LS"
+git clone https://www.github.com/eugenenoble2005/ls-for-avalonia.git --recursive
+cd ls-for-avalonia || (error "Failed to clone Avalonia LS" && exit 1)
+just install
+cd ..
+sudo rm -rf ls-for-avalonia
+log "Avalonia LS installed"

@@ -66,4 +66,25 @@ InfoMsg "OLS installed"
 InfoMsg "Installing Dotnet SDK and CSharp LS"
 Install-Scoop "dotnet-sdk"
 dotnet tool install --global csharp-ls
-InfoMsg "Dotnet SDK and CSharp LS installed" 
+InfoMsg "Dotnet SDK and CSharp LS installed"
+
+# -- Install Avalonia LS
+InfoMsg "Installing Avalonia LS"
+$avaloniaLsDir = Join-Path $env:TEMP "ls-for-avalonia"
+
+if (Test-Path $avaloniaLsDir) {
+    Remove-Item -Path $avaloniaLsDir -Recurse -Force
+}
+
+git clone https://www.github.com/eugenenoble2005/ls-for-avalonia.git $avaloniaLsDir --recursive
+if (-not $?) {
+    ErrorMsg "Failed to clone Avalonia LS"
+    exit 1
+}
+
+Push-Location $avaloniaLsDir
+just install
+Pop-Location
+
+Remove-Item -Path $avaloniaLsDir -Recurse -Force
+InfoMsg "Avalonia LS installed"

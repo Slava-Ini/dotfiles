@@ -7,6 +7,7 @@ Set-Alias -Name hx -Value helix
 # Env
 $YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
 $env:DOTNET_ROOT = "C:\Program Files\dotnet"
+$env:Path += ";C:\Users\slava\AppData\Local/avalonia-ls"
 
 # Startship
 Invoke-Expression (&starship init powershell)
