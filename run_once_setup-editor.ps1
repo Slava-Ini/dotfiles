@@ -62,8 +62,9 @@ if (Test-Path $odinfmtExe) {
 Remove-Item -Path $olsDir -Recurse -Force
 InfoMsg "OLS installed"
 
-# -- Install Dotnet SDK and Omnisharp
-InfoMsg "Installing Dotnet SDK and Omnisharp"
+# -- Install Dotnet SDK and CSharp LS
+InfoMsg "Installing Dotnet SDK and CSharp LS"
 Install-Scoop "dotnet-sdk"
 Install-Scoop "omnisharp"
-InfoMsg "Dotnet SDK and Omnisharp installed" 
+dotnet tool install --global csharp-ls
+InfoMsg "Dotnet SDK and CSharp LS installed" 

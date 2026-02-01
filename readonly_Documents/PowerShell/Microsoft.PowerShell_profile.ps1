@@ -6,6 +6,7 @@ Set-Alias -Name hx -Value helix
 
 # Env
 $YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
+$env:DOTNET_ROOT = "C:\Program Files\dotnet"
 
 # Startship
 Invoke-Expression (&starship init powershell)
