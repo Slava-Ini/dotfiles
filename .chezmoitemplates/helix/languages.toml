@@ -41,7 +41,7 @@ name = "java"
 scope = "source.java"
 injection-regex = "java"
 file-types = ["java"]
-roots = ["pom.xml", "build.gradle"]
+roots = ["settings.gradle", "settings.gradle.kts", "pom.xml", "build.gradle"]
 language-servers = [ "jdtls" ]
 indent = { tab-width = 4, unit = "    " }
 # TODO: no idea what is going on here
@@ -96,10 +96,15 @@ config = { markdown.preview.auto = false, markdown.preview.browser = "google-chr
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
+# [language-server.jdtls]
+# command = "jdtls"
+# args = [
+#   "-data",
+#   "/home/slava/.cache/jdtls/workspace",
+#   "--jvm-arg=-javaagent:/home/slava/.config/jdtls/lombok.jar",
+# ]
+
+# -- Fixes the issue of incompatible gradle and jvm versions
 [language-server.jdtls]
-command = "jdtls"
-args = [
-  "-data",
-  "/home/slava/.cache/jdtls/workspace",
-  "--jvm-arg=-javaagent:/home/slava/.config/jdtls/lombok.jar",
-]
+command = "/home/slava/.config/jdtls/jdtls.sh"
+config.settings = { "java.gradle.java.home" = "/usr/lib/jvm/java-17-openjdk" }
