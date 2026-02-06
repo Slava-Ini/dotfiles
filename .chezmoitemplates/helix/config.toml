@@ -83,19 +83,18 @@ C-7 = "toggle_comments"
 C-7 = "toggle_comments"
 
 [keys.insert]
-# j = { k = "normal_mode" }
-# k = { j = "normal_mode" }
 "A-;" = "normal_mode"
 
-# Yazi doesn't work? (https://github.com/helix-editor/helix/wiki/Recipes#advanced-file-explorer-with-yazi)
-# [keys.normal.space]
-# e = [
-# ':sh rm -f /tmp/unique-file',
-# ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
-# ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-# ':open %sh{cat /tmp/unique-file}',
-# ':redraw',
-# ]
+[keys.normal.space]
+e  = [
+    ':sh rm -f /tmp/unique-file',
+    ':sh rm -f /tmp/unique-cwd-file',
+    ":insert-output yazi --chooser-file=/tmp/unique-file --cwd-file=/tmp/unique-cwd-file",
+    ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+    ':open %sh{cat /tmp/unique-file}',
+    ':cd %sh{cat /tmp/unique-cwd-file}',
+    ':redraw',
+]
 
 # -- What to explore
 # - Macros
