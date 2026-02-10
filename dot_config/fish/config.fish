@@ -56,7 +56,7 @@ end
 # -- Plugins & Tools
 
 # - NVM Node version
-nvm use 20 -s
+nvm use 22 -s
 
 # - Zoxide
 fish_add_path /home/slava/.local/bin
