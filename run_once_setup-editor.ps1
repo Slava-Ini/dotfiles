@@ -88,3 +88,6 @@ Pop-Location
 
 Remove-Item -Path $avaloniaLsDir -Recurse -Force
 InfoMsg "Avalonia LS installed"
+
+# -- Install JSON LS
+NpmInstall "vscode-langservers-extracted" $ScriptName

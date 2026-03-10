@@ -60,3 +60,8 @@ just install
 cd ..
 sudo rm -rf ls-for-avalonia
 log "Avalonia LS installed"
+
+# Install JSON LS
+log "Installing JSON LS"
+npm i -g vscode-langservers-extracted
+log "JSON LS installed"
