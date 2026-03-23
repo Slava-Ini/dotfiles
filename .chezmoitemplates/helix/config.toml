@@ -56,9 +56,8 @@ C-S-y = "yank_to_clipboard"
 # TODO: work on vim-like line selection
 C-r = ":config-reload"
 C-s = ":w"
-# - r is for `scooter` search and replace
-# - Somehow name those `r` and `g` "multiple commands"
-"\\" = { q = ":q", e = "buffer_picker", r = [
+# - Somehow name those "multiple commands"
+"\\" = { q = ":q", e = "buffer_picker", F = [
     ":write-all",
     ":insert-output scooter --no-stdin >/dev/tty",
     ":redraw",
@@ -68,7 +67,7 @@ C-s = ":w"
     ":insert-output lazygit >/dev/tty",
     ":redraw",
     ":reload-all"
-], m = ":lsp-workspace-command 'Open Preview'", b = ":run-shell-command ./gradlew build > /dev/null", c = "@\"%P<C-S-y><C-S-d>"}
+], m = ":lsp-workspace-command 'Open Preview'", b = ":run-shell-command ./gradlew build > /dev/null", c = "@\"%P<C-S-y><C-S-d>", r = ":reload", R = ":reset-diff-change" }
 C-space = "code_action"
 ret = ["open_below", "normal_mode"]
 "." = ["repeat_last_motion"]
