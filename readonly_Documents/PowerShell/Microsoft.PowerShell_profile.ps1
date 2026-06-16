@@ -9,6 +9,9 @@ $YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
 $env:DOTNET_ROOT = "C:\Program Files\dotnet"
 $env:Path += ";C:\Users\slava\AppData\Local/avalonia-ls"
 
+# Editor
+$env:EDITOR = "hx"
+
 # Startship
 Invoke-Expression (&starship init powershell)
 
