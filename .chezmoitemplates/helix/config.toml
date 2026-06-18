@@ -57,7 +57,7 @@ C-S-y = "yank_to_clipboard"
 C-r = ":config-reload"
 C-s = ":w"
 # - Somehow name those "multiple commands"
-"\\" = { q = ":q", e = "buffer_picker", F = [
+"\\" = { q = ":q", Q = ":q!", e = "buffer_picker", F = [
     ":write-all",
     ":insert-output scooter --no-stdin >/dev/tty",
     ":redraw",

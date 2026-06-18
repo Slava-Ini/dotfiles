@@ -15,6 +15,11 @@ sudo pacman -Syu --noconfirm helix
 sudo pacman -S --noconfirm wl-clipboard
 log "Helix installed"
 
+# Install Lua LSP (EmmyLua)
+log "Installing Lua LSP"
+cargo install emmylua_ls
+log "Lua LSP installed"
+
 # Install Typescript Language Server
 log "Installing Typescript LS, Eslint and Prettier"
 sudo pacman -S --noconfirm typescript-language-server

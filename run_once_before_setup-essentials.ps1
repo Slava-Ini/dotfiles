@@ -54,6 +54,9 @@ InfoMsg "Installing Odin"
 scoop bucket add versions 2>&1 | Out-Null
 Install-Scoop "odin"
 
+# -- Lua
+Install-Scoop "lua"
+
 # -- Yazi
 InfoMsg "Installing Yazi with optional dependencies"
 Install-Scoop "yazi"

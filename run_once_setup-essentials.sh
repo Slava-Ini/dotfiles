@@ -72,6 +72,9 @@ log "Installing Odin"
 sudo pacman -S --noconfirm odin
 log "Odin installed"
 
+# -- Lua
+sudo pacman -S --noconfirm lua
+
 # -- Java
 log "Installing Jdtls"
 yay -S jdtls

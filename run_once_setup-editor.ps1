@@ -20,6 +20,11 @@ function Install-Scoop {
 # -- Install Helix
 Install-Scoop "helix"
 
+# -- Install Lua LSP
+InfoMsg "Installing Lua LSP"
+cargo install emmylua_ls
+InfoMsg "Lua LSP installed"
+
 # -- Install Typescript Language Server, Eslint and Prettier
 NpmInstall "typescript-language-server" $ScriptName
 NpmInstall "prettier" $ScriptName
