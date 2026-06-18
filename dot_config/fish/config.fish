@@ -99,3 +99,6 @@ set -gx ATAC_KEY_BINDINGS "/home/slava/.config/atac/key_bindings.toml"
 
 # - Dotnet
 set -gx PATH $PATH "/home/slava/.dotnet/tools"
+
+# - Cargo
+set -gx PATH $PATH "$HOME/.cargo/bin"
