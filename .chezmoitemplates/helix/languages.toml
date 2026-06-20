@@ -82,6 +82,9 @@ formatter={command="xaml-styler",args=["--write-to-stdout" ,"--take-pipe"]}
 name = "c-sharp"
 language-servers = ["csharp-ls"]
 
+[[language]]
+name = "lua"
+language-servers = ["emmylua"]
 
 [language-server.csharp-ls]
 command = "csharp-ls"
@@ -108,3 +111,6 @@ command = "clippy"
 [language-server.jdtls]
 command = "/home/slava/.config/jdtls/jdtls.sh"
 config.settings = { "java.gradle.java.home" = "/usr/lib/jvm/java-17-openjdk" }
+
+[language-server.emmylua]
+command = "emmylua_ls"
