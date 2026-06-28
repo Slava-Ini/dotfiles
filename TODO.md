@@ -21,3 +21,58 @@
 - Remove redundancy:
   - Markdown lsp in helix.toml (switched to markdown oxide?)
 
+
+## Emacs
+
+
+### Shorcuts
+
+
+#### Help
+
+- C-h - help prefix (Describe)
+  - v <variable> - variable 
+  - k <key> - key 
+  - f <function> - function 
+  - m <mode> - mode 
+  - t - start built-in tutorial 
+  - b - show all shortcuts
+  - a - regex search for apropos-command
+
+> Note: <tab> shows available options
+
+#### Search
+
+- C-s / C-r — Jump to the next or previous occurrence
+
+
+#### Windows Managment
+
+- C-x - global prefix
+  - 0 - close current active window
+  - 2 - split pane horizontally into two stacked windows
+  - 3 - =//= vertically
+  - 1 - close all window splits except the active one
+  - o - cycle through windows
+   
+#### File & System
+
+- C-x - global prefix
+  - C-o - open or create a file
+  - C-s - save current buffer
+  - C-f - prompts to find a file in minibuffer
+  - C-w - write a buffer to a specific file name
+  - C-c - close and exits editor
+
+  - C-e - evaluate a command in a file (`eval-last-sexp`), cursor right after the command
+  - M-: - eval an expression
+   
+  - u - undo the last command
+
+#### Text
+
+- C-M-f / C-M-b - move forward/bacword between the pairs
+
+### Notes
+
+4. Modern Upgrades (Highly Recommended)The default Emacs completion list can feel clunky. Most Emacs users install a modern "completion framework" that shows a live, searchable dropdown list the second you press C-h v or C-h f.Popular options include:Vertico: A minimalist, vertical completion list.Ivy: A highly interactive search selection framework.Helm: A powerful, feature-rich visual tool.
