@@ -88,3 +88,7 @@
 ### Plugins
 
 - [Qick jump Helix-like](https://github.com/abo-abo/avy)
+
+### Links
+
+- [Explore Setup](https://www.youtube.com/watch?v=n5VMWuxLi10)
