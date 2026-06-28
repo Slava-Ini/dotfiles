@@ -38,6 +38,7 @@
   - t - start built-in tutorial 
   - b - show all shortcuts
   - a - regex search for apropos-command
+  - i - info documentation browser
 
 > Note: <tab> shows available options
 
@@ -69,6 +70,13 @@
    
   - u - undo the last command
 
+#### Navigation
+
+#### Mini Buffers
+
+- l / r - go back to previous / next help page
+- tab - cycle hyperlinks
+
 #### Text
 
 - C-M-f / C-M-b - move forward/bacword between the pairs
@@ -76,3 +84,7 @@
 ### Notes
 
 4. Modern Upgrades (Highly Recommended)The default Emacs completion list can feel clunky. Most Emacs users install a modern "completion framework" that shows a live, searchable dropdown list the second you press C-h v or C-h f.Popular options include:Vertico: A minimalist, vertical completion list.Ivy: A highly interactive search selection framework.Helm: A powerful, feature-rich visual tool.
+
+### Plugins
+
+- [Qick jump Helix-like](https://github.com/abo-abo/avy)
