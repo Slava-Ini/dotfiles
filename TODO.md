@@ -24,15 +24,13 @@
 
 ## Emacs
 
-
 ### Shorcuts
-
 
 #### Help
 
 - C-h - help prefix (Describe)
   - v <variable> - variable 
-  - k <key> - key 
+  - k <shortcut> - key 
   - f <function> - function 
   - m <mode> - mode 
   - t - start built-in tutorial 
@@ -45,7 +43,6 @@
 #### Search
 
 - C-s / C-r — Jump to the next or previous occurrence
-
 
 #### Windows Managment
 
@@ -65,12 +62,24 @@
   - C-w - write a buffer to a specific file name
   - C-c - close and exits editor
 
-  - C-e - evaluate a command in a file (`eval-last-sexp`), cursor right after the command
-  - M-: - eval an expression
-   
   - u - undo the last command
 
 #### Navigation
+
+##### Bookmarks
+
+- C-x r
+  - l - list bookmarks
+  - m - set bookmark
+  - b - jump to a bookmark
+
+#### Evaluation & Commands
+
+- M-x <command-name> - execute a command
+- C-x
+  - C-e - evaluate a command in a file (`eval-last-sexp`), cursor right after the command
+  - M-: - repeat complex command
+- M-: - eval an expression
 
 #### Mini Buffers
 
@@ -92,3 +101,9 @@
 ### Links
 
 - [Explore Setup](https://www.youtube.com/watch?v=n5VMWuxLi10)
+
+### Config TODO
+
+- Remove blinking when reaching document start/end
+- Make scroll half the page (also retain the cursor in the middle of the line?)
+- [Bookmark idea](https://www.reddit.com/r/emacs/comments/4ykg7s/comment/d6pjfsk/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
