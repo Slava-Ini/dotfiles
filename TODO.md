@@ -30,13 +30,16 @@
 
 - C-h - help prefix (Describe)
   - v <variable> - variable 
-  - k <shortcut> - key 
+  - k <key/click/menu-item> - key 
   - f <function> - function 
   - m <mode> - mode 
+  - c <shortcut> - shortcut typed
+  - x <command> - command name
   - t - start built-in tutorial 
   - b - show all shortcuts
-  - a - regex search for apropos-command
-  - i - info documentation browser
+  - a - regex search for apropos-command (M-x commands)
+  - i / r - info documentation browser
+  - ? - list available help options
 - <shortcut> C-h - find global bindings starting with <shortcut>
 
 > Note: <tab> shows available options
@@ -46,6 +49,8 @@
 - C-s / C-r — Jump to the next or previous occurrence
 
 #### Windows Managment
+
+> Windows
 
 - C-x - global prefix
   - 0 - close current active window
@@ -57,12 +62,19 @@
 - C-M
   v - scroll the bottom window
 
+> Frames
+
+- C-x
+  - 5 2 - create new frame
+  - 5 0 - close frame
+
+
 #### Buffers
 
 - C-x
   - C-b - list buffers
   - s   - save some buffers to theeir files (prompted which ones to save)
-  - b   - switch buffer
+  - b   - switch buffer (can switch to `*Messages*` buffer as well)
    
 #### File & System
 
@@ -92,6 +104,7 @@
   - replace-string - replaces prompted text
   - recover-this-file - recovers auto-saved file
   - auto-fill-mode - toggle the minor mode on/off
+  - list-packages - see emacs community packages
 - C-x
   - C-e - evaluate a command in a file (`eval-last-sexp`), cursor right after the command
   - M-: - repeat complex command
@@ -101,7 +114,8 @@
 
 #### Mini Buffers
 
-- l / r - go back to previous / next help page
+- l / r - go back to previous / next visited page
+- n / p - got next / previous page according to menu layout
 - tab - cycle hyperlinks
 
 #### Text
