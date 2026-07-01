@@ -35,6 +35,7 @@
   - m <mode> - mode 
   - c <shortcut> - shortcut typed
   - x <command> - command name
+  - o <symbol> - any name
   - t - start built-in tutorial 
   - b - show all shortcuts
   - a - regex search for apropos-command (M-x commands)
@@ -91,6 +92,10 @@
 
 - Any motion suffix with shift - shift selection mode (`shift-select-mode`)
 
+#### Code
+
+- C-M-i - code completion
+
 #### Bookmarks
 
 - C-x r
@@ -111,6 +116,7 @@
   - f   - set fill-column (for `auto-fill-break` minor mode)
 - M-q  - re-fill (according to `auto-fill-break`)
 - M-: - eval an expression
+- C-j - eval an expression and append output to the next line
 
 #### Mini Buffers
 
