@@ -37,10 +37,11 @@
   - b - show all shortcuts
   - a - regex search for apropos-command
   - i - info documentation browser
+- <shortcut> C-h - find global bindings starting with <shortcut>
 
 > Note: <tab> shows available options
 
-#### Search
+#### Search & Replace
 
 - C-s / C-r — Jump to the next or previous occurrence
 
@@ -51,7 +52,17 @@
   - 2 - split pane horizontally into two stacked windows
   - 3 - =//= vertically
   - 1 - close all window splits except the active one
+  - 4 f (or 4 C-f) - find file in other window
   - o - cycle through windows
+- C-M
+  v - scroll the bottom window
+
+#### Buffers
+
+- C-x
+  - C-b - list buffers
+  - s   - save some buffers to theeir files (prompted which ones to save)
+  - b   - switch buffer
    
 #### File & System
 
@@ -64,9 +75,11 @@
 
   - u - undo the last command
 
-#### Navigation
+#### Selection & Text
 
-##### Bookmarks
+- Any motion suffix with shift - shift selection mode (`shift-select-mode`)
+
+#### Bookmarks
 
 - C-x r
   - l - list bookmarks
@@ -76,9 +89,14 @@
 #### Evaluation & Commands
 
 - M-x <command-name> - execute a command
+  - replace-string - replaces prompted text
+  - recover-this-file - recovers auto-saved file
+  - auto-fill-mode - toggle the minor mode on/off
 - C-x
   - C-e - evaluate a command in a file (`eval-last-sexp`), cursor right after the command
   - M-: - repeat complex command
+  - f   - set fill-column (for `auto-fill-break` minor mode)
+- M-q  - re-fill (according to `auto-fill-break`)
 - M-: - eval an expression
 
 #### Mini Buffers
