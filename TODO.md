@@ -111,12 +111,14 @@
   - auto-fill-mode - toggle the minor mode on/off
   - list-packages - see emacs community packages
 - C-x
-  - C-e - evaluate a command in a file (`eval-last-sexp`), cursor right after the command
+  - C-e - evaluate an expression in a text (`eval-last-sexp`), cursor right after the command
   - M-: - repeat complex command
   - f   - set fill-column (for `auto-fill-break` minor mode)
 - M-q  - re-fill (according to `auto-fill-break`)
-- M-: - eval an expression
-- C-j - eval an expression and append output to the next line
+- M-: - eval an expression (inserted)
+- C-j - eval an expression in a text and append output to the next line
+- C-M-x = C-x C-e
+
 
 #### Mini Buffers
 
