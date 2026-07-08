@@ -11,6 +11,7 @@
 
 (delete-selection-mode 1)
 (global-display-line-numbers-mode 1)
+(blink-cursor-mode 0)
 (recentf-mode 1)
 
 (keymap-global-set "C-c e" 'recentf-open-files)
