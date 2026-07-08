@@ -18,6 +18,8 @@ alias lg="lazygit"
 alias ld="lazydocker"
 alias ch="chezmoi"
 alias hx="helix"
+alias c="xclip"
+alias v="xclip -o"
 
 # - Prompt (# = root, $ = user)
 function fish_prompt
