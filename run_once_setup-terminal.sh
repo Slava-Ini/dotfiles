@@ -111,3 +111,8 @@ log "which installed"
 log "Installing openssh"
 sudo pacman -S --noconfirm openssh
 log "openssh installed"
+
+# -- openssh
+log "Installing git-delta"
+sudo pacman -S --noconfirm git-delta
+log "git-delta installed"
