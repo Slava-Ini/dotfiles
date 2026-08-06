@@ -85,6 +85,8 @@ language-servers = ["csharp-ls"]
 name = "lua"
 language-servers = ["emmylua"]
 
+
+# Example: https://github.com/helix-editor/helix/discussions/4681
 [[language]]
 name = "go"
 language-servers = ["gopls"]
