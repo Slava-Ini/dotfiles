@@ -54,6 +54,9 @@ InfoMsg "Installing Odin"
 scoop bucket add versions 2>&1 | Out-Null
 Install-Scoop "odin"
 
+# -- Go
+Install-Scoop "go"
+
 # -- Lua
 Install-Scoop "lua"
 

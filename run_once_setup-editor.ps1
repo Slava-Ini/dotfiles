@@ -73,6 +73,12 @@ Install-Scoop "dotnet-sdk"
 dotnet tool install --global csharp-ls
 InfoMsg "Dotnet SDK and CSharp LS installed"
 
+# -- Install Go LSP
+InfoMsg "Installing Go LSP"
+go install golang.org/x/tools/gopls@latest
+go install mvdan.cc/gofumpt@latest
+InfoMsg "Go LSP installed"
+
 # -- Install Avalonia LS
 InfoMsg "Installing Avalonia LS"
 $avaloniaLsDir = Join-Path $env:TEMP "ls-for-avalonia"

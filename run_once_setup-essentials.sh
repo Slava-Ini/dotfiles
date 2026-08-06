@@ -72,6 +72,11 @@ log "Installing Odin"
 sudo pacman -S --noconfirm odin
 log "Odin installed"
 
+# -- Go
+log "Installing Go"
+sudo pacman -S --noconfirm go
+log "Go installed"
+
 # -- Lua
 sudo pacman -S --noconfirm lua
 

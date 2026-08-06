@@ -51,6 +51,12 @@ log "Installing Markdown Oxide"
 sudo pacman -S --noconfirm markdown-oxide
 log "Markdon Oxide installed" 
 
+# Install Gopls and Gofumpt Oxide
+log "Installing Go LSP"
+go install golang.org/x/tools/gopls@latest
+go install mvdan.cc/gofumpt@latest
+log "Markdon Go LSP installed" 
+
 # Install Dotnet SDK and CSharp LS
 log "Installing Dotnet SDK and CSharp LS"
 sudo pacman -S --noconfirm dotnet-sdk
