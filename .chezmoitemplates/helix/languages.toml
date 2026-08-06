@@ -3,7 +3,6 @@ name = "rust"
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = false
 
-
 [[language]]
 name = "javascript"
 formatter = { command = "prettier" }
@@ -86,6 +85,12 @@ language-servers = ["csharp-ls"]
 name = "lua"
 language-servers = ["emmylua"]
 
+[[language]]
+name = "go"
+language-servers = ["gopls"]
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "gofumpt" }
+
 [language-server.csharp-ls]
 command = "csharp-ls"
 
@@ -114,3 +119,20 @@ config.settings = { "java.gradle.java.home" = "/usr/lib/jvm/java-17-openjdk" }
 
 [language-server.emmylua]
 command = "emmylua_ls"
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+staticcheck = true
+usePlaceholders = true
+gofumpt = true
+
+[language-server.gopls.config.analyses]
+unusedfunc = true
+unusedparams = true
+unreachable = true
+unusedvariable = true
+
+[language-server.gopls.config.hints]
+compositeLiteralTypes = true

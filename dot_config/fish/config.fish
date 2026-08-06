@@ -104,3 +104,6 @@ set -gx PATH $PATH "/home/slava/.dotnet/tools"
 
 # - Cargo
 set -gx PATH $PATH "$HOME/.cargo/bin"
+
+# - Go bin
+set -gx PATH $PATH "$HOME/go/bin"
