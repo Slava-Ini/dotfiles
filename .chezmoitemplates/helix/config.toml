@@ -83,7 +83,7 @@ C-7 = "toggle_comments"
 C-7 = "toggle_comments"
 
 [keys.select.space]
-m = ":pipe math %{selection}"
+m = ":pipe math (string collect < /dev/stdin)"
 
 [keys.insert]
 "A-;" = "normal_mode"
@@ -98,7 +98,7 @@ e  = [
     ':cd %sh{cat /tmp/unique-cwd-file}',
     ':redraw',
 ]
-m = ":pipe math %{selection}"
+m = ":pipe math (string collect < /dev/stdin)"
 
 # -- What to explore
 # - Macros
