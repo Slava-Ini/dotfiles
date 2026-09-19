@@ -83,7 +83,7 @@ C-7 = "toggle_comments"
 C-7 = "toggle_comments"
 
 [keys.select.space]
-m = ":pipe math (string collect < /dev/stdin)"
+m = [":pipe math (string collect < /dev/stdin)", "normal_mode"]
 
 [keys.insert]
 "A-;" = "normal_mode"
