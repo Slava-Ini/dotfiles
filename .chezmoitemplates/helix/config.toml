@@ -1,6 +1,7 @@
 theme = "nightfox"
 
 [editor]
+shell = ["fish", "-c"]
 true-color = true
 line-number = "relative"
 
@@ -81,6 +82,9 @@ C-7 = "toggle_comments"
 [keys.select]
 C-7 = "toggle_comments"
 
+[keys.select.space]
+m = ":pipe math %{selection}"
+
 [keys.insert]
 "A-;" = "normal_mode"
 
@@ -94,6 +98,7 @@ e  = [
     ':cd %sh{cat /tmp/unique-cwd-file}',
     ':redraw',
 ]
+m = ":pipe math %{selection}"
 
 # -- What to explore
 # - Macros
